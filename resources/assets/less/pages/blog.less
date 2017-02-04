@@ -1,0 +1,99 @@
+section#posts{
+    button{
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+    }
+    h1{
+        font-weight: 700;
+        &.visible-xs{
+            padding: 15px;
+            text-align: left;
+            height: 60px;
+            color: white;
+            text-shadow:@text-shadow;
+            background-color: rgba(0,0,0,0.5);
+            height: 100%;
+        }
+    }
+    .col-md-5.background{
+        height: 200px;
+    }
+    .post{
+        padding: 0px;
+        .escription{
+            text-align: justify;
+            height: 100px;
+        }
+        .btn{
+            float: right;
+            margin-bottom: 80px;
+        }
+    }
+    ul{
+        padding: 0;
+        a{
+            li{
+                img{
+                    height: 28px;
+                    padding-right: 10px;
+                }
+                list-style-type: none;
+                background-color: white;
+                border-radius: 5px;
+                padding: 20px;
+                margin: 0 15px 15px;
+                color:@default-text-color;
+            }
+            li:hover{
+                background-color: @green-light;
+            }
+        }
+    }
+    
+}
+// Small devices specific rules
+@media (max-width: @screen-sm-max) {
+    section#posts{
+        .post{
+            background-color: white;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+            .btn{
+                float: none;
+                margin: 15px 0;
+            }
+        }
+        .col-md-9{
+            margin-top:50px;
+            margin-bottom: 50px;
+            background-color: transparent;
+            box-shadow: none;
+            border-radius: 0;
+        }
+        ul a li {
+            border-radius: 5px;
+            padding: 15px;
+            margin: 3px;
+            width: 100%;
+            display: inline-block;
+            img {
+                height: 32px;
+                padding-right: 0;
+                margin: 5px;
+            }
+        }
+    }
+}
+// Extra-small devices specific rules
+@media (max-width: @screen-xs-max) {
+    section#posts{
+        ul a li {
+            text-align: center;
+            width: 22%;
+        }
+    }
+}

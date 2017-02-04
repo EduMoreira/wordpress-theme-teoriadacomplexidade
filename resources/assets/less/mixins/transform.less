@@ -1,0 +1,10 @@
+.transform (@parameter) {
+    -webkit-transform: @parameter;
+    -moz-transform: @parameter;
+    -ms-transform: @parameter;
+    transform: @parameter;
+}
+
+.rotate (@angle) {
+    .transform(rotate(@angle));
+}

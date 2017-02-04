@@ -1,0 +1,77 @@
+.screen-xs-only (@rules) {
+    @media (max-width: @screen-xs-max) {
+        @rules();
+    }
+}
+
+.screen-sm (@rules) {
+    @media (min-width: @screen-sm-min) {
+        @rules();
+    }
+}
+
+.screen-sm-only (@rules) {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        @rules();
+    }
+}
+
+.screen-md-only (@rules) {
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+        @rules();
+    }
+}
+
+.screen-md (@rules) {
+    @media (min-width: @screen-md-min) {
+        @rules();
+    }
+}
+
+.screen-lg-only (@rules) {
+    @media (min-width: @screen-lg-min) {
+        @rules();
+    }
+}
+
+.screen-height-xs-only (@rules) {
+    @media (max-height: @screen-height-xs-max) {
+        @rules();
+    }
+}
+
+.screen-height-sm-only (@rules) {
+    @media (min-height: @screen-height-sm-min) and (max-height: @screen-height-sm-max) {
+        @rules();
+    }
+}
+
+.screen-height-sm (@rules) {
+    @media (min-height: @screen-height-sm-min) {
+        @rules();
+    }
+}
+
+.screen-height-md-only (@rules) {
+    @media (min-height: @screen-height-md-min) and (max-height: @screen-height-md-max) {
+        @rules();
+    }
+}
+
+.screen-height-md (@rules) {
+    @media (min-height: @screen-height-md-min) {
+        @rules();
+    }
+}
+
+.screen-height-lg-only (@rules) {
+    @media (min-height: @screen-height-lg-min) {
+        @rules();
+    }
+}
+
+.screen-height-lg (@rules) {
+    @media (min-height: @screen-height-lg-min) {
+        @rules();
+    }
+}

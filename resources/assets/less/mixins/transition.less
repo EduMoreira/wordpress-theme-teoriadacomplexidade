@@ -1,0 +1,21 @@
+.transition-base(@properties) {
+    -webkit-transition: @properties;
+    -moz-transition: @properties;
+    -ms-transition: @properties;
+    transition: @properties;
+}
+
+.transition(@element; @duration) {
+    .transition-base(@element @duration @transition-default-easing);
+}
+
+.transition-all(@duration) {
+    .transition(all; @duration);
+}
+
+.transition-delay(@delay) {
+    -webkit-transition-delay: @delay;
+    -moz-transition-delay: @delay;
+    -ms-transition-delay: @delay;
+    transition-delay: @delay;
+}

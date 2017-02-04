@@ -1,0 +1,44 @@
+section#article{
+    h1{
+        display: inline;
+    }
+    .share {
+        float: right;
+        img{
+            height: 32px;
+        }
+    }
+    .img-responsive{
+        float: left;
+        height: 300px;
+        padding: 0 15px 15px 0;
+    }
+    .background{
+        height: 200px;
+        &.col-md-5{
+            height: 250px;
+            float: right;
+            margin-left: 15px;
+        }
+    }
+    .download{
+        display: inline-block;
+    }
+    iframe{
+        height: 60vh;
+        width: 100%;
+    }
+    .btn{
+        float: right;
+    }
+}
+@media (max-width: @screen-sm-max) {
+    section#article{
+        .background{
+            &.col-md-5{
+                margin: 15px 0;
+                float: none;
+            }
+        }
+    }
+}

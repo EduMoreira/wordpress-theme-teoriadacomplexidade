@@ -1,0 +1,47 @@
+section#books{
+    padding: 50px 0;
+    h1,h2{
+        text-align: center;
+        padding: 0;
+    }
+    h2{
+        font-weight: 300;
+    }
+    h1{
+        font-size: 15px;
+    }
+    a{
+        color: @default-text-color;
+    }
+    a:hover{
+        color: @indigo-500;
+        text-decoration: none;
+    }
+    .col-md-3{
+        padding: 15px;
+    }
+    .col-md-3:hover{
+        background-color: @green-light;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    h1.title{
+        padding-bottom: 0;
+        padding-top: 15px;
+        font-size: 14px;
+        text-align: center;
+        height: 60px;
+    }
+    .background{
+        background-size: contain;
+        height: 240px;
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: @screen-sm-max) {
+    section#books{
+        .background{
+            height: 160px;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+#instagram-widget {
+    background-color: white;
+    .widgettitle {
+        text-align: center;
+    }
+    ul.instagram-pics {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        margin: 0;
+        li {
+            display: inline-block;
+            width: 50%;
+            opacity: 1;
+            .transition(opacity; @instagram-transition-duration);
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            &:hover {
+                opacity: 0.85;
+            }
+        }
+    }
+}
+.screen-sm({
+    #instagram-widget {
+        ul.instagram-pics {
+            li {
+                width: 20%;
+            }
+        }
+    }
+});

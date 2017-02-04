@@ -1,0 +1,8 @@
+/node_modules
+/js/website.min.js
+/js/website.min.js.map
+/build
+style.css
+style.css.map
+build.tar.gz
+.idea/

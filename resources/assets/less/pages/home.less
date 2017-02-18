@@ -1,14 +1,17 @@
 section#banner.carousel{
-    .btn{
-        box-shadow:0 2px 5px 0 rgba(0,0,0,.25);        
-    }
     .background{
         height: 80vh;
     }
     .content{
+        h1,h2{
+            text-shadow: none;
+        }
         h1{
             font-size: 48px;
-            padding-bottom: 0;
+            padding-bottom: 18px;
+        }
+        h2{
+            font-size: 14px;
         }
     }
     .content--wrapper{
@@ -54,11 +57,7 @@ section#banner.carousel{
     }
 }
 section#feed{
-    padding-top:50px;
-    h1,h2{
-        text-align: center;
-        padding-bottom: 30px;
-    }
+    padding-top: 50px;
     h2{
         font-weight: 200;
         margin-top:0;
@@ -76,22 +75,19 @@ section#feed{
 }
 section#categories{
     padding-top: 50px;
-    h1,h2{
-        text-align: center;
-        padding-bottom: 30px;
-    }
     h2{
         font-weight: 200;
         margin-top:0;
     }
     .col-md-2{
          h1{
-             font-size: 18px;
-             text-align: center;
+            font-size: 14px;
+            text-align: center;
+            height: 36px;
          }
      }
     .background{
-         height: 25vh
+         height: 120px;
      }
 }
 a{
@@ -107,9 +103,6 @@ a{
 }
 // Small and extra-small devices specific rules
 @media (max-width: @screen-sm-max) {
-    section#mailchimp{
-        height: 40vh;
-    }
     section#feed{
         .facetwp-template .col-md-12{
             .btn{

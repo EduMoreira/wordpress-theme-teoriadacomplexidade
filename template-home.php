@@ -25,7 +25,7 @@ Template Name: Início
 													<div class="row">
 														<div class="hero-text <?php echo get_sub_field('banner_secondary_image')?'col-md-6':'col-md-12'; ?>">
 															<h1 class="<?php the_sub_field('background_pattern'); ?> uppercase col-md-12"><?php the_sub_field('carousel_title'); ?></h1>
-															<p class="<?php the_sub_field('background_pattern'); ?> col-md-12"><?php the_sub_field('carousel_subtitle'); ?></p>
+															<h2 class="<?php the_sub_field('background_pattern'); ?> uppercase col-md-12"><?php the_sub_field('carousel_subtitle'); ?></h2>
 														</div>
 														<div class="col-md-offset-3 col-md-3 hidden-sm hidden-xs">
 															<a href="<?php the_sub_field('carousel_link'); ?>">
@@ -60,11 +60,11 @@ Template Name: Início
 	<section id="categories">
 		<div class="container-fluid">
 			<div class="row no-padding">
-				<h1 class="uppercase">Escolha a Área do seu interesse</h1>				
+				<div class="col-md-12"><h1 class="uppercase">Escolha a Área do seu interesse</h1></div>
 				<?php if( have_rows('areas') ): ?>                        
 					<?php while( have_rows('areas') ): the_row(); ?>
 						<a href="<?php the_sub_field('link'); ?>">
-							<div class="col-md-2">
+							<div class="col-md-2 .col-sm-4 col-xs-6">
 								<section>
 									<div class="background" style="background-image:url(<?php the_sub_field('imagem'); ?>);"></div>
 									<h1 class="uppercase"><?php the_sub_field('title'); ?></h1>
@@ -79,11 +79,11 @@ Template Name: Início
 	<!--/Categories-->
 	<!--Feed-->
 	<section id="feed">
-		<div class="container">
+		<div class="container-fluid">
 			<!--Feed-->
-			<div class="col-md-12 no-padding">
+			<div class="row no-padding">
 				<div class="no-padding">
-					<h1 class="uppercase">Os Posts mais recentes</h1>
+					<div class="col-md-12"><h1 class="uppercase">Os Posts mais recentes</h1></div>
 					<?php echo do_shortcode('[facetwp template="posts"]'); ?>
 				</div>
 			</div>

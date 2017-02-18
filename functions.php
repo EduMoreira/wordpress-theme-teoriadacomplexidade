@@ -33,11 +33,27 @@
     function cutom_login_logo() {
 		echo "<style type=\"text/css\">
 		body.login div#login h1 a {
-		background-image: url(".get_bloginfo('template_directory')."/img/logo-black.svg);
-		-webkit-background-size: auto;
-		background-size: auto;
-		margin: 0 0 25px;
-		width: 320px;
+			background-image: url(".get_bloginfo('template_directory')."/img/logo-black.svg);
+			-webkit-background-size: auto;
+			background-size: auto;
+			margin: 0 0 25px;
+			width: 320px;
+			height: 120px
+		}
+		body.login {
+			background: #1976D2;
+		}
+		body #loginform {
+			/* margin-top: 20px; */
+			/* margin-left: 0; */
+			/* padding: 26px 24px 46px; */
+			background: transparent;;
+			/* -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13); */
+			box-shadow: none;
+			color: white;
+		}
+		label{
+			color: white !important;
 		}
 		</style>";
 }

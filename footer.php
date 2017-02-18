@@ -1,3 +1,4 @@
+	<section id="footer"></section>
 	<!--Modal-->
 	<div class="modal fade" id="inscrever" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog modal-lg" role="document">

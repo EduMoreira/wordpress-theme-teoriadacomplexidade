@@ -1,11 +1,14 @@
 .facetwp-page {
     background-color: @bluegrey-900;
-    border-radius: 50%;
+    border-radius: 5px;
     height: 36px;
     width: 36px;
     text-align: center;
-    color: white;
     padding: 5px !important;
+    &.active{
+        background-color: @blue-700;
+        color: white;
+    }
 }
 .facetwp-pager-label{
     display: none !important;
@@ -32,6 +35,4 @@
 }
 h3,h2,p{
     color:@default-text-color;
-}
-.facetwp-facet {
 }

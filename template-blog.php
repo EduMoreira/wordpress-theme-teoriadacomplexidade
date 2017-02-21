@@ -15,7 +15,7 @@ Template Name: Blog
 		</div>
     </section>
 	<!--Blog-->
-	<section id="posts">
+	<section id="blog">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 no-padding">

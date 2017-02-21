@@ -9,16 +9,11 @@
                         <a href="http://twitter.com/home?status=<?php the_title(); ?> <?php bloginfo('url')?>?p=<?php the_ID(); ?> via @tcomplexidade" title="Postar no Twitter!" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-network/twitter.svg" height="32px"></a>
                         <a href="http://www.facebook.com/sharer.php?u=<?php bloginfo('url')?>?p=<?php the_ID(); ?><?php the_title(); ?>" title="Postar no Facebook" target="blank"><img src="<?php bloginfo('template_url'); ?>/img/social-network/facebook.svg" height="32px"></a>
                     </div>
-                    <h1 class="uppercase">
-                        <?php the_title(); ?>
-                    </h1>
-                    <h2>
-                        <?php the_field('subtitle'); ?>
-                    </h2>
-                    <!--<div class="<?php echo get_field('video')?'hidden':'background col-md-5'; ?>" style="background-image:url(<?php the_field('cover'); ?>);"></div>-->
+                    <h1 class="uppercase"><?php the_title(); ?></h1>
+                    <h2><?php the_field('subtitle'); ?></h2>
                     <div>
-                         <div class="<?php echo get_field('pdf_file')?'download':'hidden'; ?>">
-                            <a target="_blank" href="<?php the_field('pdf_file'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/icons/pdf.svg"><p class="btn btn-green">Download</p></a>
+                        <div class="<?php echo get_field('pdf_file')?'download':'hidden'; ?>">
+                            <a target="_blank" href="<?php the_field('pdf_file'); ?>"><img class="file-type" src="<?php bloginfo('template_url'); ?>/img/icons/pdf.svg"><p class="btn btn-green">Download</p></a>
                         </div>
                         <p><?php the_field('video'); ?></p>
                         <div class="col-md-12 no-padding">

@@ -1,4 +1,4 @@
-section#posts{
+section#blog{
     button{
         padding: 0;
         margin: 0;
@@ -9,7 +9,6 @@ section#posts{
         width: 100%;
     }
     h1{
-        font-weight: 700;
         &.visible-xs{
             padding: 15px;
             text-align: left;
@@ -23,15 +22,19 @@ section#posts{
     .col-md-5.background{
         height: 200px;
     }
+    .col-md-12{
+        min-height: 250px;
+    }
     .post{
-        padding: 0px;
-        .escription{
+        h1{
+            margin-top:0;
+        }
+        .description{
             text-align: justify;
             height: 100px;
         }
         .btn{
             float: right;
-            margin-bottom: 80px;
         }
     }
     ul{
@@ -39,9 +42,11 @@ section#posts{
         a{
             li{
                 img{
-                    height: 28px;
+                    height: 20px;
                     padding-right: 10px;
                 }
+                font-size: 12px;
+                text-transform: uppercase;
                 list-style-type: none;
                 background-color: white;
                 border-radius: 5px;
@@ -58,7 +63,7 @@ section#posts{
 }
 // Small devices specific rules
 @media (max-width: @screen-sm-max) {
-    section#posts{
+    section#blog{
         .post{
             background-color: white;
             box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
@@ -90,7 +95,7 @@ section#posts{
 }
 // Extra-small devices specific rules
 @media (max-width: @screen-xs-max) {
-    section#posts{
+    section#blog{
         ul a li {
             text-align: center;
             width: 22%;

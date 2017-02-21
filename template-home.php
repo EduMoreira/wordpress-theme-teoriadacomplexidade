@@ -25,7 +25,7 @@ Template Name: Início
 													<div class="row">
 														<div class="hero-text <?php echo get_sub_field('banner_secondary_image')?'col-md-6':'col-md-12'; ?>">
 															<h1 class="<?php the_sub_field('background_pattern'); ?> uppercase col-md-12"><?php the_sub_field('carousel_title'); ?></h1>
-															<h2 class="<?php the_sub_field('background_pattern'); ?> uppercase col-md-12"><?php the_sub_field('carousel_subtitle'); ?></h2>
+															<h2 class="<?php the_sub_field('background_pattern'); ?> col-md-12"><?php the_sub_field('carousel_subtitle'); ?></h2>
 														</div>
 														<div class="col-md-offset-3 col-md-3 hidden-sm hidden-xs">
 															<a href="<?php the_sub_field('carousel_link'); ?>">
@@ -79,7 +79,7 @@ Template Name: Início
 	<!--/Categories-->
 	<!--Feed-->
 	<section id="feed">
-		<div class="container-fluid">
+		<div class="container">
 			<!--Feed-->
 			<div class="row no-padding">
 				<div class="no-padding">

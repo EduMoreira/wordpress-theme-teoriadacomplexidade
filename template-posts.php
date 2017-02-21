@@ -17,7 +17,7 @@ Template Name: Postagens
     </section>
 	<!--/Banner-->
 	<!--Posts-->
-	<section id="complexity-theory">
+	<section id="posts">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">

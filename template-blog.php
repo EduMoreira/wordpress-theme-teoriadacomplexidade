@@ -27,12 +27,12 @@ Template Name: Blog
 							<?php echo do_shortcode('[facetwp facet="categories"]'); ?>							
 						</div>-->
 						<ul>
-							<a href="artigos/?fwp_categories=artigos"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/format-aside.svg">Artigos</li></a>
-							<a href="textos/?fwp_categories=textos"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/media-text.svg">Textos</li></a>
+							<a href="artigos"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/format-aside.svg">Artigos</li></a>
+							<a href="textos"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/media-text.svg">Textos</li></a>
 							<a href="fotos/?fwp_categories=fotos"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/format-gallery.svg">Fotos</li></a>
-							<a href="filmes/"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/format-video.svg">Filmes</li></a>							
+							<a href="filmes"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/format-video.svg">Filmes</li></a>							
 							<a href="postagens/videos/?fwp_categories=video"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/video-alt3.svg">Vídeos</li></a>
-							<a href="podcasts/"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/microphone.svg">Podcasts</li></a>
+							<a href="podcasts"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/microphone.svg">Podcasts</li></a>
 							<a href="livros"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/book.svg">Livros</li></a>
 							<a href="links-recomendados"><li><img src="<?php bloginfo('template_url'); ?>/img/icons/dashicons/admin-links.svg">Links</li></a>							
 						</ul>

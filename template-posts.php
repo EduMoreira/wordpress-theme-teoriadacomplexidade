@@ -16,6 +16,18 @@ Template Name: Postagens
 		</div>
     </section>
 	<!--/Banner-->
+	<nav>
+		<div class="scroll-menu">
+			<a href="artigos">Artigos</a>
+			<a href="textos">Textos</a>
+			<a href="fotos/?fwp_categories=fotos">Fotos</a>
+			<a href="filmes">Filmes</a>
+			<a href="postagens/videos/?fwp_categories=video">Vídeos</a>
+			<a href="podcasts">Podcasts</a>
+			<a href="livros">Livros</a>
+			<a href="links-recomendados">Links</a>
+		</div>
+	</nav>
 	<!--Posts-->
 	<section id="posts">
 		<div class="container">

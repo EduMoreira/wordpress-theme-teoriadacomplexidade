@@ -1,13 +1,4 @@
 section#blog{
-    button{
-        padding: 0;
-        margin: 0;
-        background-color: transparent;
-        border: none;
-        box-shadow: none;
-        border-radius: 0;
-        width: 100%;
-    }
     h1{
         &.visible-xs{
             padding: 15px;
@@ -22,9 +13,6 @@ section#blog{
     .col-md-5.background{
         height: 200px;
     }
-    .col-md-12{
-        min-height: 250px;
-    }
     .post{
         h1{
             margin-top:0;
@@ -36,30 +24,7 @@ section#blog{
         .btn{
             float: right;
         }
-    }
-    ul{
-        padding: 0;
-        a{
-            li{
-                img{
-                    height: 20px;
-                    padding-right: 10px;
-                }
-                font-size: 12px;
-                text-transform: uppercase;
-                list-style-type: none;
-                background-color: white;
-                border-radius: 5px;
-                padding: 20px;
-                margin: 0 15px 15px;
-                color:@default-text-color;
-            }
-            li:hover{
-                background-color: @green-light;
-            }
-        }
-    }
-    
+    }    
 }
 // Small devices specific rules
 @media (max-width: @screen-sm-max) {
@@ -71,34 +36,6 @@ section#blog{
                 float: none;
                 margin: 15px 0;
             }
-        }
-        .col-md-9{
-            margin-top:50px;
-            margin-bottom: 50px;
-            background-color: transparent;
-            box-shadow: none;
-            border-radius: 0;
-        }
-        ul a li {
-            border-radius: 5px;
-            padding: 15px;
-            margin: 3px;
-            width: 100%;
-            display: inline-block;
-            img {
-                height: 32px;
-                padding-right: 0;
-                margin: 5px;
-            }
-        }
-    }
-}
-// Extra-small devices specific rules
-@media (max-width: @screen-xs-max) {
-    section#blog{
-        ul a li {
-            text-align: center;
-            width: 22%;
         }
     }
 }

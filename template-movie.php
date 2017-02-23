@@ -14,7 +14,7 @@ Template Name: Filmes
 			</div>
 		</div>
     </section>
-	<section id="books">
+	<section id="posts">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -44,6 +44,10 @@ Template Name: Filmes
 							<a href="<?php the_permalink(); ?>">
 								<div class="col-md-2 col-xs-6">
 									<div class="background" style="background-image:url(<?php the_field('cover'); ?>);">
+										<div class="content--wrapper">
+											<div class="content center">
+											</div>
+										</div>
 									</div>
 									<?php the_title( '<h1 class="uppercase">', '</h1>' ); ?>
 								</div>

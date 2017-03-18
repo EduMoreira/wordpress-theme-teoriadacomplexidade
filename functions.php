@@ -30,7 +30,7 @@
 	));
 }
     /*Custom WordPress Login Logo*/
-    function cutom_login_logo() {
+    function custom_login_logo() {
 		echo "<style type=\"text/css\">
 		body.login div#login h1 a {
 			background-image: url(".get_bloginfo('template_directory')."/img/logo-black.svg);
@@ -40,24 +40,9 @@
 			width: 320px;
 			height: 120px
 		}
-		body.login {
-			background: #1976D2;
-		}
-		body #loginform {
-			/* margin-top: 20px; */
-			/* margin-left: 0; */
-			/* padding: 26px 24px 46px; */
-			background: transparent;;
-			/* -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13); */
-			box-shadow: none;
-			color: white;
-		}
-		label{
-			color: white !important;
-		}
 		</style>";
 }
-    add_action( 'login_enqueue_scripts', 'cutom_login_logo' );	
+    add_action( 'login_enqueue_scripts', 'custom_login_logo' );	
 	/* Creates Postagens */
 	add_action('init', 'type_post_postagens'); 
 	function type_post_postagens() { 
@@ -295,7 +280,41 @@
         ); 
             register_post_type( 'forum' , $args );
             flush_rewrite_rules();
-} 
+}
+	/* Creates Links */
+	add_action('init', 'type_post_links'); 
+	function type_post_links() { 
+		$labels = array(
+			'name' => _x('Links', 'post type general name'),
+			'singular_name' => _x('Link', 'post type singular name'),
+			'add_new' => _x('Adicionar', 'Novo'),
+			'add_new_item' => __('Novo'),
+			'edit_item' => __('Editar'),
+			'new_item' => __('Novo'),
+			'view_item' => __('Ver'),
+			'search_items' => __('Procurar'),
+			'not_found' =>  __('Nenhum registro encontrado'),
+			'not_found_in_trash' => __('Nenhum registro encontrado na lixeira'),
+			'parent_item_colon' => '',
+			'menu_name' => 'Links',
+		); 
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'public_queryable' => true,
+			'show_ui' => true,			
+			'query_var' => true,
+			'rewrite' => true,
+			'capability_type' => 'post',
+			'has_archive' => true,
+			'hierarchical' => false,
+			'menu_position' => null,
+			'menu_icon' => 'dashicons-format-aside',		
+			'supports' => array('title','editor','thumbnail','comments', 'excerpt', 'custom-fields', 'revisions', 'trackbacks')
+        ); 
+            register_post_type( 'link' , $args );
+            flush_rewrite_rules();
+}
             /* Creates Category */
             register_taxonomy(
 				"categorias",
@@ -308,6 +327,7 @@
 						"artigo",
 						"texto",
 						"forum",
+						"link",
                 ), 
                 array(            
                     "label" => "Categorias", 

@@ -14,7 +14,20 @@ Template Name: Livros
 			</div>
 		</div>
     </section>
-	<section id="books">
+	<nav>
+		<div class="scroll-menu">
+			<a href="/index.php/blog">Blog</a>
+			<a href="/index.php/blog/artigos">Artigos</a>
+			<a href="/index.php/blog/textos">Textos</a>
+			<a href="/index.php/blog/fotos/?fwp_categories=fotos">Fotos</a>
+			<a href="/index.php/blog/filmes">Filmes</a>
+			<a href="/index.php/blog/postagens/videos/?fwp_categories=video">Vídeos</a>
+			<a href="/index.php/blog/podcasts">Podcasts</a>
+			<a href="/index.php/blog/livros">Livros</a>
+			<a href="/index.php/blog/links-recomendados">Links</a>
+		</div>
+	</nav>
+	<section id="posts">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -43,7 +56,12 @@ Template Name: Livros
 					if( $the_query->have_posts() ): while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 						<a href="<?php the_permalink(); ?>">
 							<div class="col-md-2 col-xs-6">
-								<div class="background" style="background-image:url(<?php the_field('cover'); ?>);"></div>
+								<div class="background" style="background-image:url(<?php the_field('cover'); ?>);">
+									<div class="content--wrapper">
+										<div class="content center">
+										</div>
+									</div>
+								</div>
 							</div>
 						</a>
 					<?php endwhile; ?>

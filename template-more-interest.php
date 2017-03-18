@@ -21,6 +21,9 @@ Template Name: Mais Áreas de Interesse
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
+					<?php the_field('description'); ?>
+				</div>
+				<div class="col-md-12">
 					<?php if( have_rows('more-interest') ): ?>                        
 						<?php while( have_rows('more-interest') ): the_row(); ?>
 							<div class="col-md-3">

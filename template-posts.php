@@ -18,14 +18,15 @@ Template Name: Postagens
 	<!--/Banner-->
 	<nav>
 		<div class="scroll-menu">
-			<a href="artigos">Artigos</a>
-			<a href="textos">Textos</a>
-			<a href="fotos/?fwp_categories=fotos">Fotos</a>
-			<a href="filmes">Filmes</a>
-			<a href="postagens/videos/?fwp_categories=video">Vídeos</a>
-			<a href="podcasts">Podcasts</a>
-			<a href="livros">Livros</a>
-			<a href="links-recomendados">Links</a>
+			<a href="/index.php/blog">Blog</a>
+			<a href="/index.php/blog/artigos">Artigos</a>
+			<a href="/index.php/blog/textos">Textos</a>
+			<a href="/index.php/blog/fotos/?fwp_categories=fotos">Fotos</a>
+			<a href="/index.php/blog/filmes">Filmes</a>
+			<a href="/index.php/blog/postagens/videos/?fwp_categories=video">Vídeos</a>
+			<a href="/index.php/blog/podcasts">Podcasts</a>
+			<a href="/index.php/blog/livros">Livros</a>
+			<a href="/index.php/blog/links-recomendados">Links</a>
 		</div>
 	</nav>
 	<!--Posts-->

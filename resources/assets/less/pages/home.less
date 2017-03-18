@@ -1,14 +1,31 @@
 section#banner.carousel{
     .background{
-        height: 80vh;
+        height: 70vh;
+        .content--wrapper.background{
+            background-size: cover;
+        }
+        &.white{
+            background-image: -webkit-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+            background-image: -o-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+            background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+        }
+        &.black{
+            background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+            background-blend-mode: multiply;
+        }
+        &.blue{
+           background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
+        }
     }
     .content{
         h1,h2{
-            text-shadow: none;
             padding-bottom: 15px;
+            &.black{
+                color: black;
+            }
         }
         h1{
-            font-size: 48px;
+            font-size: 32px;
         }
         h2{
             font-size: 14px;
@@ -35,11 +52,12 @@ section#banner.carousel{
         }
     }
     .highlight-img{
-        height: 30vh;
+        max-height: 20vh;
         margin: 0 auto;
     }
     .secondary-img{
-        height: 25vh;
+        max-height: 20vh;
+        margin: 0 auto;
     }
     .black{
         color: black;
@@ -50,11 +68,28 @@ section#banner.carousel{
     .blue{
         color: @indigo-500;
     }
-    .red{
-        color: @red-a700;
+}
+section#feed{
+    padding-top: 50px;
+    .col-md-12{
+        margin-bottom: 15px;
+        text-align: center;
     }
-    .green{
-        color: @green;
+    h1{
+        margin-top:0;
+    }
+    .description{
+        text-align: justify;
+    }
+    .facetwp-template{
+        .col-md-6{
+            min-height: 250px;
+            &.hidden-xs{
+                h1{
+                    text-align: left;
+                }
+            }
+        }
     }
 }
 section#feed{
@@ -100,17 +135,6 @@ section#categories{
     .background{
          height: 120px;
      }
-}
-a{
-    .more{
-        text-align: center;
-        height: 5vh;
-        padding: 5px;
-        font-weight: 900;
-        letter-spacing: 3px;
-        color:white;
-        text-decoration: none;
-    }
 }
 // Small and extra-small devices specific rules
 @media (max-width: @screen-sm-max) {
@@ -162,11 +186,6 @@ a{
             .background{
                 height: 33vh;
             }
-        }
-    }
-    a{
-        .more{
-            height: 10vh;
         }
     }
 }

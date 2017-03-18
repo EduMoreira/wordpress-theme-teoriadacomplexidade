@@ -4,8 +4,7 @@ Template Name: Início
 */
 ?>
 <?php get_header(); ?>
-<!--Carousel-->
-<main>
+	<!--Carousel-->
 	<section id="banner" class="carousel">
 		<div class="container-fluid no-padding">
 			<div class="raw">
@@ -13,8 +12,8 @@ Template Name: Início
 					<?php if( have_rows('carousel') ): ?>
 						<div class="carousel-inner" role="listbox">
 							<?php while( have_rows('carousel') ): the_row(); ?>
-								<div class="item<?php echo get_sub_field('initial_carousel')?' active':''; ?> <?php the_sub_field('background_pattern'); ?> background" style="background-color:<?php the_sub_field('background_color'); ?>;background-image:url(<?php the_sub_field('carousel_image_desktop'); ?>);">
-										<div class="content--wrapper emphasize">
+								<div class="item <?php echo get_sub_field('initial_carousel')?'active':''; ?> background <?php the_sub_field('background_color'); ?>">
+										<div class="content--wrapper background" style="background-image:url(<?php the_sub_field('carousel_image_desktop'); ?>);">
 											<div class="content center">
 												<div class="container">
 													<div class="row">
@@ -23,18 +22,16 @@ Template Name: Início
 														</div>
 													</div>
 													<div class="row">
-														<div class="hero-text <?php echo get_sub_field('banner_secondary_image')?'col-md-6':'col-md-12'; ?>">
-															<h1 class="<?php the_sub_field('background_pattern'); ?> uppercase col-md-12"><?php the_sub_field('carousel_title'); ?></h1>
-															<h2 class="<?php the_sub_field('background_pattern'); ?> col-md-12"><?php the_sub_field('carousel_subtitle'); ?></h2>
+														<div class="hero-text <?php echo get_sub_field('banner_secondary_image')?'col-md-6':'col-md-offset-2 col-md-8'; ?>">
+															<h1 class="<?php the_sub_field('background_pattern'); ?> uppercase"><?php the_sub_field('carousel_title'); ?></h1>
+															<h2 class="<?php the_sub_field('background_pattern'); ?>"><?php the_sub_field('carousel_subtitle'); ?></h2>
+															<a class="btn btn-<?php the_sub_field('background_pattern'); ?> <?php echo get_sub_field('carousel_link')?'':'hidden'; ?>" value="Contato" href="<?php the_sub_field('carousel_link'); ?>">Saiba Mais</a>
 														</div>
 														<div class="col-md-offset-3 col-md-3 hidden-sm hidden-xs">
 															<a href="<?php the_sub_field('carousel_link'); ?>">
 																<img class="<?php echo get_sub_field('banner_secondary_image')?'secondary-img':'hidden'; ?>" src="<?php the_sub_field('banner_secondary_image'); ?>">
 															</a>
 														</div>
-													</div>
-													<div class="hero-text <?php echo get_sub_field('banner_secondary_image')?'col-md-6':'col-md-12'; ?>">
-														<a class="btn btn-<?php the_sub_field('background_pattern'); ?> <?php echo get_sub_field('carousel_link')?'':'hidden'; ?>" value="Contato" href="<?php the_sub_field('carousel_link'); ?>">Saiba Mais</a></p>
 													</div>
 												</div>
 											</div>

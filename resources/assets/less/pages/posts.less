@@ -1,13 +1,15 @@
 section#posts{
+    min-height: 70vh;
+    padding-bottom: 50px;
     .background{
         background-color: @blue-500;
         border-radius: 5px;
     }
     .background:hover{
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: @box-shadow;
     }
     h1{
-        font-size: 22px;
+        font-size: 14px;
         padding-bottom: 10px;
         font-weight: 700;
         text-transform: uppercase;
@@ -33,33 +35,19 @@ section#posts{
             width: 100%;
         }
     }
-    .filters{
-        margin-top: 15px;
-        margin-bottom: 15px;
-        background-color: #cacaca;
-        padding: 30px;
-        .facetwp-type-checkboxes{
-            max-height: 100%;
-        }
-        .facetwp-search{
-            padding: 10px;
-            border-width: inherit;
-            width: 100%;
-        }
-    }
 }
 // Small and extra-small devices specific rules
 @media (max-width: @screen-sm-max) {
     section#posts{
         h1{
-            font-size: 16px;
+            font-size: 10px;
         }
         .col-md-3{
             .content{                   
                 height: 250px;
             }
         }
-        .col-md-3{
+        .col-md-2{
             .content{                   
                 height: 180px;
             }

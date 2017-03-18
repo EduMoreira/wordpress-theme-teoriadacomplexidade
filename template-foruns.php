@@ -38,7 +38,7 @@ Template Name: Fóruns
 							<div class="col-md-12">
                                 <section>
                                     <h1 class="title"><?php the_title(); ?></h1>
-									<p>Nesse forum <?php comments_number( 'seja o primeiro a comentar', 'existe um comentario', 'há % comentários' ); ?>.</p>
+									<p>Nesse forum <?php comments_number( 'seja o faça seu comentário', 'existe um comentário', 'há % comentários' ); ?>.</p>
                              		<p><?php the_field('descript'); ?></p>
                                     <a class="btn btn-blue" href="<?php the_permalink(); ?>">Participar</a>                                     
                                 </section>

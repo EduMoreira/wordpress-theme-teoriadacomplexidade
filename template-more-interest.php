@@ -5,7 +5,7 @@ Template Name: Mais Áreas de Interesse
 ?>
 <?php get_header(); ?>
 <main>
-	<!--Carousel-->
+	<!--Banner-->
     <section id="banner">
         <div class="background" style="background-image:url(<?php the_field('cover'); ?>);">
 			<div class="content--wrapper">
@@ -15,7 +15,7 @@ Template Name: Mais Áreas de Interesse
 			</div>
 		</div>
     </section>
-	<!--/Carousel-->
+	<!--/Banner-->
 	<!--Categories-->
 	<section id="more-interest">
 		<div class="container">

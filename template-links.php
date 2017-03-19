@@ -5,7 +5,7 @@ Template Name: Links Recomendados
 ?>
 <?php get_header(); ?>
 <main>
-	<!--Carousel-->
+	<!--Banner-->
     <section id="banner">
         <div class="background" style="background-image:url(<?php the_field('cover'); ?>);">
 			<div class="content--wrapper">
@@ -15,7 +15,7 @@ Template Name: Links Recomendados
 			</div>
 		</div>
     </section>
-	<!--/Carousel-->
+	<!--/Banner-->
 	<nav>
 		<div class="scroll-menu">
 			<a href="/index.php/blog">Blog</a>
@@ -29,27 +29,53 @@ Template Name: Links Recomendados
 			<a href="/index.php/blog/links-recomendados">Links</a>
 		</div>
 	</nav>
-	<!--Categories-->
-	<section id="more-interest">
+		<section id="more-interest">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<?php if( have_rows('links') ): ?>                    
-						<?php while( have_rows('links') ): the_row(); ?>
-							<div class="col-md-4">
-								<section>
-									<div class="card">
-										<a href="<?php the_sub_field('link_url'); ?>" target="_blank">
-											<div class="background" style="background-image:url(<?php the_sub_field('miniatura'); ?>);">
-												<h1><?php the_sub_field('name'); ?></h1>
-											</div>
-										</a>
-										<p class="description hidden-xs"><?php the_sub_field('descript'); ?></p>
-									</div>
-								</section>
-							</div>
-						<?php endwhile; ?>                        
-					<?php endif; ?>
+					<!--Search-->
+					<div class="col-md-offset-2 col-md-8">
+						<?php echo do_shortcode('[facetwp facet="search"]'); ?>
+					</div>
+					<!--/Search-->
+					<div class="col-md-12"><?php the_field('description'); ?></div>
+					<?php
+					// It's a paged query
+					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+					// Query parameters
+					$args = array(
+						'post_type' => 'link',
+						'post_status' => 'publish',
+						'paged' => $paged,
+						'posts_per_page' => 24,
+						'orderby' => 'date',
+						'order' => 'DESC',
+					);
+					// Fetch the posts
+					$the_query = new WP_Query($args);
+					$total_posts = $the_query->found_posts;
+					// The loop
+					if( $the_query->have_posts() ): while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					<div class="col-md-4">
+						<div class="card">
+							<a href="<?php the_field('link'); ?>" target="_blank">
+								<div class="background" style="background-image:url(<?php the_field('cover'); ?>);">
+									<h1>
+										<?php the_title(); ?>
+									</h1>
+								</div>
+							</a>
+							<p class="description hidden-xs">
+								<?php the_field('description'); ?>
+							</p>
+						</div>
+					</div>
+					<?php endwhile; ?>
+					<?php if ($total_posts > $posts_per_page) : ?>
+					<?php endif ?>
+					<?php wp_reset_postdata();
+					endif;
+					wp_reset_query(); ?>
 				</div>
 				<div class="col-md-12">
 					<?php echo do_shortcode('[facetwp pager="true"]'); ?>
@@ -57,6 +83,5 @@ Template Name: Links Recomendados
 			</div>
 		</div>
 	</section>
-	<!--/Categories-->
 </main>
 <?php get_footer();	?>

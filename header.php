@@ -35,6 +35,7 @@
 	<!-- Google Fontes-->
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Pontano+Sans' rel='stylesheet' type='text/css'>
 	<!--/Google Fontes-->
+	<link href='<?php bloginfo('template_url'); ?>/css/justifiedGallery.min.css' rel='stylesheet' type='text/css'>
 	<link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('template_url'); ?>/img/favicons/apple-touch-icon-57x57.png?v=2">
 	<link rel="apple-touch-icon" sizes="60x60" href="<?php bloginfo('template_url'); ?>/img/favicons/apple-touch-icon-60x60.png?v=2">
 	<link rel="apple-touch-icon" sizes="72x72" href="<?php bloginfo('template_url'); ?>/img/favicons/apple-touch-icon-72x72.png?v=2">

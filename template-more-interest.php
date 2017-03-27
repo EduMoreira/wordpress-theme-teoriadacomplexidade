@@ -23,18 +23,18 @@ Template Name: Mais Áreas de Interesse
 				<div class="col-md-12">
 					<?php the_field('description'); ?>
 				</div>
-				<div class="col-md-12">
+				<div>
 					<?php if( have_rows('more-interest') ): ?>                        
 						<?php while( have_rows('more-interest') ): the_row(); ?>
-							<div class="col-md-3">
+							<div class="col-md-4">
 								<div class="card">
 									<a href="<?php the_sub_field('link'); ?>">
+										<h1 class="uppercase"><?php the_sub_field('title'); ?></h1>
 										<div class="background" style="background-image:url(<?php the_sub_field('cover'); ?>);">
-											<h1 class="uppercase"><?php the_sub_field('title'); ?></h1>
 										</div>
 									</a>
 									<p class="description hidden-xs"><?php the_sub_field('description'); ?></p>
-									<a class="btn" href="<?php the_sub_field('link'); ?>">Mais</a>
+									<!--<a class="btn" href="<?php the_sub_field('link'); ?>">Mais</a>-->
 								</div>
 							</div>
 						<?php endwhile; ?>                        

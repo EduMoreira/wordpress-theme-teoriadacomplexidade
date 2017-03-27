@@ -35,7 +35,7 @@ Template Name: Blog
 					<div class="col-md-offset-2 col-md-8">
 						<?php echo do_shortcode('[facetwp facet="search"]'); ?>
 					</div>
-					<div class="col-md-12">
+					<div>
 						<?php echo do_shortcode('[facetwp template="blog"]'); ?>
 					</div>
 				</div>

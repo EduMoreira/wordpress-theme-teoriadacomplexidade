@@ -84,34 +84,6 @@ Template Name: Início
 					<?php echo do_shortcode('[facetwp template="posts"]'); ?>
 				</div>
 			</div>
-			<!--/Feed-->
-			<!--Comments-->
-			<!--<div class="col-md-4 no-padding">
-				<section id="comments">
-					<div class="">
-						<?php
-						if( $comments = $wpdb->get_results(
-						"SELECT comment_author, comment_author_url, comment_content,
-							comment_ID, comment_post_ID
-						FROM $wpdb->comments
-						WHERE comment_approved = '1'
-						ORDER BY comment_date_gmt DESC LIMIT 4") ) :
-						?>
-							<ul>
-								<?php foreach ($comments as $comment) { ?>
-									<a href="<?php echo get_permalink($comment->comment_post_ID); ?>#comment-<?php echo $comment->comment_ID; ?>" title="on <?php echo $comment->post_title; ?>">
-										<li>
-											<?php echo get_avatar( $comment, '60' ); ?>
-											<?php echo strip_tags($comment->comment_author); ?> disse: <?php echo wp_html_excerpt( $comment->comment_content, 40 ); ?>...
-										</li>
-									</a>
-								<?php }  ?>
-							</ul>
-						<?php endif; ?>
-					</div>
-				</section>
-			</div>-->
-			<!--/Comments-->
 		</div>
 	</section>
 	<!--/Feed-->

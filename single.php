@@ -17,23 +17,38 @@
                         </div>
                         <p><?php the_field('video'); ?></p>
                         <div class="col-md-12 no-padding">
-                            <?php if( have_rows('image_gallery') ): ?>
-                                <?php $count = 0 ?>
-                                <?php while( have_rows('image_gallery') ): the_row(); ?>
-                                    <a title="<?php the_sub_field('image_description'); ?>" href="<?php the_sub_field('image'); ?>" alt"<?php the_sub_field('image_description'); ?>" data-rel="lightbox-gallery-1">
-                                        <div class="col-md-4 background" style="background-image:url(<?php the_sub_field('image'); ?>);"></div>
-                                    </a>
-                                <?php endwhile; ?>
+
+                            <?php
+
+                            $images = get_field('gallery');
+                            if( $images ): ?>
+                                <div id="image-gallery" class="justifiedGallery">
+                                    <?php foreach( $images as $image ): ?>
+                                        <a href="<?php echo $image['url']; ?>" data-rel="lightbox-gallery-1">
+                                            <img alt="" src="<?php echo $image['sizes']['thumbnail']; ?>"/>
+                                        </a>
+                                    <?php endforeach; ?>
+                                </div>
                             <?php endif; ?>
+
                         </div>
                         <p><?php the_field('content'); ?></p>
                     </div>
                 </div>
                 <div class="col-md-offset-1 col-md-10 comments">
                     <?php comments_template( '', true ); ?>
-                </div>                
+                </div>
             </div>
         </div>  
     </section>
 </main>
+<script src="<?php bloginfo('template_url'); ?>/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$("#image-gallery").justifiedGallery({
+        rowHeight : 200,
+        lastRow : 'nojustify',
+        margins : 5,
+        randomize : false,
+    });
+</script>
 <?php get_footer(); ?>

@@ -33,11 +33,6 @@ Template Name: Links Recomendados
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<!--Search-->
-					<div class="col-md-offset-2 col-md-8">
-						<?php echo do_shortcode('[facetwp facet="search"]'); ?>
-					</div>
-					<!--/Search-->
 					<div class="col-md-12"><?php the_field('description'); ?></div>
 					<?php
 					// It's a paged query
@@ -59,10 +54,10 @@ Template Name: Links Recomendados
 					<div class="col-md-4">
 						<div class="card">
 							<a href="<?php the_field('link'); ?>" target="_blank">
+								<h1>
+									<?php the_title(); ?>
+								</h1>
 								<div class="background" style="background-image:url(<?php the_field('cover'); ?>);">
-									<h1>
-										<?php the_title(); ?>
-									</h1>
 								</div>
 							</a>
 							<p class="description hidden-xs">

@@ -42,7 +42,7 @@ Template Name: Início
 								<?php if( have_rows('carousel') ): ?>
 									<?php $count = 0 ?>
 									<?php while( have_rows('carousel') ): the_row(); ?>
-										<li data-target="#hero-carousel" data-slide-to="<?php echo $count++; ?>" class="<?php echo get_sub_field('initial_case')?'active':''; ?> hidden-sm hidden-xs"></li>
+										<li data-target="#carousel" data-slide-to="<?php echo $count++; ?>" class="<?php echo get_sub_field('initial_case')?'active':''; ?>"></li>
 									<?php endwhile; ?>
 								<?php endif; ?>
 							</ol>

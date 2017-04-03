@@ -27,5 +27,7 @@
 	</div>
 	<div class="about-project"><a>About Project</a><div>
 	<?php wp_footer() ?>
+	<script src="https://use.typekit.net/rar3hwc.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	</body>
 </html>

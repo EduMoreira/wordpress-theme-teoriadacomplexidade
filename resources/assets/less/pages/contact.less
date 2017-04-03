@@ -1,3 +1,41 @@
 section#contact{
-    padding: 80px 0;
+    background-color: white;
+    padding-top: 50px;
+    min-height: 70vh;
+    p{
+        font-size:14px;
+        line-height: 20px;
+    }
+    h3{
+        font-size:18px;
+    }
+    .btn{
+        width: 100%;
+        border-radius: 0;
+    }
+    .wpcf7-not-valid-tip {
+        color: white;
+        font-size: 15px;
+        display: block;
+        background-color: @red-500;
+        padding: 5px 15px;
+    }
+    .form-control{
+        border-radius: 3px;
+        background-color: @bluegrey-50;
+    }
+    label {
+        margin-bottom: 5px;
+        padding-top: 15px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+// Small and extra-small devices specific rules
+@media (max-width: @screen-sm-max) {
+    section#contac{
+        .col-md-3{
+            text-align: center;
+        }
+    }
 }

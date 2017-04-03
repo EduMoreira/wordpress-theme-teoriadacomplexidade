@@ -24,7 +24,7 @@ Template Name: Início
 													<div class="row">
 														<div class="hero-text <?php echo get_sub_field('banner_secondary_image')?'col-md-6':'col-md-offset-2 col-md-8'; ?>">
 															<h1 class="<?php the_sub_field('background_pattern'); ?> uppercase"><?php the_sub_field('carousel_title'); ?></h1>
-															<h2 class="<?php the_sub_field('background_pattern'); ?>"><?php the_sub_field('carousel_subtitle'); ?></h2>
+															<p class="<?php the_sub_field('background_pattern'); ?>"><?php the_sub_field('carousel_subtitle'); ?></p>
 															<a class="btn btn-<?php the_sub_field('background_pattern'); ?> <?php echo get_sub_field('carousel_link')?'':'hidden'; ?>" value="Contato" href="<?php the_sub_field('carousel_link'); ?>">Saiba Mais</a>
 														</div>
 														<div class="col-md-offset-3 col-md-3 hidden-sm hidden-xs">

@@ -1,15 +1,22 @@
+.serif(){
+    font-family: "adobe-text-pro", serif;
+}
+.heading-font(){
+    font-family: "myriad-pro", sans-serif;
+}
 *, body{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    .heading-font();
     .screen-sm({
-        font-size: 16px;
+        font-size: 18px;
     });
 }
-p{
-    font-family: 'Abhaya Libre', serif;
-    color: @bluegrey-900;
-    a,b,em,u,strong{
-        font-family: 'Abhaya Libre', serif;
+p {
+    .serif();
+    margin: 0 0 30px;
+    line-height: 30px;
+    > a,b,em,u,strong,i{
+        .serif();
     }
 }
 a{
@@ -17,18 +24,6 @@ a{
 }
 a:hover{
     color: @indigo-500;
-    text-decoration: none;
-}
-.serif(){
-    font-family: 'Abhaya Libre', serif;
-}
-.heading-font(){
-    font-family: 'Montserrat', sans-serif;
-}
-a.title{
-    font-size: 26px;
-    text-transform: uppercase;
-    font-weight: 900;
 }
 h1, h2, h3, h4, h5, h6{
     .heading-font();

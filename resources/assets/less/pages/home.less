@@ -4,21 +4,9 @@ section#banner.carousel{
         .content--wrapper.background{
             background-size: cover;
         }
-        &.white{
-            background-image: -webkit-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-            background-image: -o-linear-gradient(bottom, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-            background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-        }
-        &.black{
-            background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-            background-blend-mode: multiply;
-        }
-        &.blue{
-           background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%);
-        }
     }
     .content{
-        h1,h2{
+        h1,p{
             padding-bottom: 15px;
             &.black{
                 color: black;
@@ -27,17 +15,13 @@ section#banner.carousel{
         h1{
             font-size: 32px;
         }
-        h2{
-            font-size: 14px;
-            line-height: 1.8;
-        }
     }
     .content--wrapper{
         text-align: center;
         width: 100%;
     }
     .col-md-6{
-        h1,h2{
+        h1,p{
             text-align: left;
         }
         .btn{
@@ -47,9 +31,6 @@ section#banner.carousel{
     .col-md-12{
         text-align: center;
         margin: 0 auto;
-        h1,h2{
-            text-align: center;
-        }
     }
     .highlight-img{
         max-height: 20vh;
@@ -58,15 +39,6 @@ section#banner.carousel{
     .secondary-img{
         max-height: 20vh;
         margin: 0 auto;
-    }
-    .black{
-        color: black;
-    }
-    .white{
-        color: white;
-    }
-    .blue{
-        color: @indigo-500;
     }
 }
 section#feed{
@@ -83,15 +55,11 @@ section#feed{
     }
     .post{
         h1{
-            height: 48px;
+            min-height: 32px;
             margin-top: 0;
         }
         .description{
-            text-align: justify;
             min-height: 100px;
-        }
-        .btn{
-            float: right;
         }
     }    
 }
@@ -125,23 +93,18 @@ section#categories{
             }
             .description{
                 min-height: 0;
-            }
-            .btn{
-                float: none;
+                p{
+                    margin: 0;
+                }
             }
         }  
     }
     section#banner.carousel{
-        .content{
-            h1{
-                font-size: 32px;
-            }
-        }
         .background{
             height: 100vh;
         }
         .col-md-6{
-            h1,h2{
+            h1,p{
                 text-align: center;
             }
             .btn{

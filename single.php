@@ -25,7 +25,7 @@
                                 <div id="image-gallery" class="justifiedGallery">
                                     <?php foreach( $images as $image ): ?>
                                         <a href="<?php echo $image['url']; ?>" data-rel="lightbox-gallery-1">
-                                            <img alt="" src="<?php echo $image['sizes']['thumbnail']; ?>"/>
+                                            <img alt="" src="<?php echo $image['url']; ?>"/>
                                         </a>
                                     <?php endforeach; ?>
                                 </div>

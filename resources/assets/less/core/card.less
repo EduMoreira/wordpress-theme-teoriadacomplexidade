@@ -4,13 +4,12 @@
     box-shadow: @box-shadow;
     h1{
         padding: 15px;
-        height: 60px;
+        min-height: 32px;
         margin: 0;
     }
     .description{
-        text-align: justify;
         padding: 15px 15px 0;
-        height: 150px;
+        height: 210px;
     }
     .background{
          height:120px;
@@ -33,20 +32,20 @@
     h1{
         font-size: 15px;
     }
+    .btn{
+        float: right;
+    }
     .share{
         float: right;
         img{
             height: 32px;
         }
     }
-    a{
-        color: @blue-700;
-    }
-    a:hover{
-        color: @indigo-500;
-        text-decoration: none;
-    }
-    .btn{
-        float: right;
+}
+@media (max-width: @screen-sm-max) {
+    .post{
+        .btn{
+            float: none;
+        }
     }
 }

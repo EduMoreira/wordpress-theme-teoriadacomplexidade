@@ -6,68 +6,70 @@ Template Name: Início
 <?php get_header(); ?>
 	<!--Carousel-->
 	<section id="banner" class="carousel">
-		<div class="container-fluid no-padding">
-			<div class="raw">
-				<div id="carousel" class="carousel slide" data-ride="carousel">
-					<?php if( have_rows('carousel') ): ?>
-						<div class="carousel-inner" role="listbox">
-							<?php while( have_rows('carousel') ): the_row(); ?>
-								<div class="item <?php echo get_sub_field('initial_carousel')?'active':''; ?> background <?php the_sub_field('background_color'); ?>">
-										<div class="content--wrapper background" style="background-image:url(<?php the_sub_field('carousel_image_desktop'); ?>);">
-											<div class="content center">
-												<div class="container">
-													<div class="row">
-														<div class="col-md-12">
-															<img class="<?php echo get_sub_field('banner_primary_image')?'col-md-offset-1 highlight-img':'hidden'; ?>" src="<?php the_sub_field('banner_primary_image'); ?>">
-														</div>
-													</div>
-													<div class="row">
-														<div class="hero-text <?php echo get_sub_field('banner_secondary_image')?'col-md-6':'col-md-offset-2 col-md-8'; ?>">
-															<h1 class="<?php the_sub_field('background_pattern'); ?> uppercase"><?php the_sub_field('carousel_title'); ?></h1>
-															<p class="<?php the_sub_field('background_pattern'); ?>"><?php the_sub_field('carousel_subtitle'); ?></p>
-															<a class="btn btn-<?php the_sub_field('background_pattern'); ?> <?php echo get_sub_field('carousel_link')?'':'hidden'; ?>" value="Contato" href="<?php the_sub_field('carousel_link'); ?>">Saiba Mais</a>
-														</div>
-														<div class="col-md-offset-3 col-md-3 hidden-sm hidden-xs">
-															<a href="<?php the_sub_field('carousel_link'); ?>">
-																<img class="<?php echo get_sub_field('banner_secondary_image')?'secondary-img':'hidden'; ?>" src="<?php the_sub_field('banner_secondary_image'); ?>">
-															</a>
-														</div>
-													</div>
-												</div>
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+			<?php if( have_rows('carousel') ): ?>
+				<div class="carousel-inner" role="listbox">
+					<?php while( have_rows('carousel') ): the_row(); ?>
+						<div class="carousel-item <?php echo get_sub_field('initial_carousel')?'active':''; ?> background <?php the_sub_field('background_color'); ?>">
+							<div class="content--wrapper background" style="background-image:url(<?php the_sub_field('carousel_image_desktop'); ?>);">
+								<div class="content center <?php echo get_sub_field('carousel_image_desktop')?'emphasize':''; ?>">
+									<div class="container">
+										<div class="row">
+											<div class="col-md-12">
+												<img class="<?php echo get_sub_field('banner_primary_image')?'offset-md-2 highlight-img':'hidden-md-up'; ?>" src="<?php the_sub_field('banner_primary_image'); ?>">
 											</div>
 										</div>
+										<div class="row">
+											<div class="hero-text <?php echo get_sub_field('banner_secondary_image')?'col-md-6':'offset-md-2 col-md-8'; ?>">
+												<h1 class="<?php the_sub_field('background_pattern'); ?> uppercase"><?php the_sub_field('carousel_title'); ?></h1>
+												<h2 class="<?php the_sub_field('background_pattern'); ?>"><?php the_sub_field('carousel_subtitle'); ?></h2>
+												<a class="btn btn-<?php the_sub_field('background_pattern'); ?> <?php echo get_sub_field('carousel_link')?'':'hidden-up'; ?>" value="Contato" href="<?php the_sub_field('carousel_link'); ?>">Saiba Mais</a>
+											</div>
+											<div class="col-md-offset-3 col-md-3 hidden-md-up">
+												<a href="<?php the_sub_field('carousel_link'); ?>">
+													<img class="<?php echo get_sub_field('banner_secondary_image')?'secondary-img':'hidden'; ?>" src="<?php the_sub_field('banner_secondary_image'); ?>">
+												</a>
+											</div>
+										</div>
+									</div>
 								</div>
-							<?php endwhile; ?>
-							<ol class="carousel-indicators">
-								<?php if( have_rows('carousel') ): ?>
-									<?php $count = 0 ?>
-									<?php while( have_rows('carousel') ): the_row(); ?>
-										<li data-target="#carousel" data-slide-to="<?php echo $count++; ?>" class="<?php echo get_sub_field('initial_case')?'active':''; ?>"></li>
-									<?php endwhile; ?>
-								<?php endif; ?>
-							</ol>
+							</div>
 						</div>
-					<?php endif; ?>
+					<?php endwhile; ?>
+					<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Proximo</span>
+					</a>
+					<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Anterior</span>
+					</a>
+					<ol class="carousel-indicators">
+						<?php if( have_rows('carousel') ): ?>
+							<?php $count = 0 ?>
+							<?php while( have_rows('carousel') ): the_row(); ?>
+								<li data-target="#carousel" data-slide-to="<?php echo $count++; ?>" class="<?php echo get_sub_field('initial_case')?'active':''; ?>"></li>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</ol>
 				</div>
-			</div>
+			<?php endif; ?>
 		</div>
 	</section>
 	<!--/Carousel-->
 	<!--Categories-->
 	<section id="categories">
-		<div class="container-fluid">
-			<div class="row no-padding">
-				<div class="col-md-12"><h1 class="uppercase">Escolha a Área do seu interesse</h1></div>
+		<div class="container">
+			<h3 class="uppercase">Escolha a Área do seu interesse</h3>
+			<div class="row">
 				<?php if( have_rows('areas') ): ?>                        
-					<?php while( have_rows('areas') ): the_row(); ?>
-						<a href="<?php the_sub_field('link'); ?>">
-							<div class="col-md-2 .col-sm-4 col-xs-6">
-								<section>
-									<div class="background" style="background-image:url(<?php the_sub_field('imagem'); ?>);"></div>
-									<h1 class="uppercase"><?php the_sub_field('title'); ?></h1>
-								</section>
-							</div>
-						</a>
+					<?php while( have_rows('areas') ): the_row(); ?>						
+						<div class="col-6 col-md-2">
+							<a href="<?php the_sub_field('link'); ?>">
+								<div class="background" style="background-image:url(<?php the_sub_field('imagem'); ?>);"></div>
+								<h4 class="uppercase"><?php the_sub_field('title'); ?></h4>
+							</a>
+						</div>
 					<?php endwhile; ?>                        
 				<?php endif; ?>
 			</div>
@@ -77,20 +79,12 @@ Template Name: Início
 	<!--Feed-->
 	<section id="feed">
 		<div class="container">
-			<!--Feed-->
-			<div class="row no-padding">
-				<div class="no-padding">
-					<div class="col-md-12"><h1 class="uppercase">Os Posts mais recentes</h1></div>
-					<?php echo do_shortcode('[facetwp template="posts"]'); ?>
-				</div>
+			<h3 class="uppercase">Os Posts mais recentes</h3>
+			<div class="col-md-9">
+				<?php echo do_shortcode('[facetwp template="posts"]'); ?>
 			</div>
 		</div>
 	</section>
 	<!--/Feed-->
 </main>
-<!--<script type="text/javascript">
-        $(document).ready(function() {
-           $('#myModal').modal('show');
-        });
-</script>-->
 <?php get_footer();	?>

@@ -179,6 +179,40 @@
             register_post_type( 'livro' , $args );
             flush_rewrite_rules();
 }
+	/* Creates Photos */
+	add_action('init', 'type_post_photos'); 
+	function type_post_photos() { 
+		$labels = array(
+			'name' => _x('Fotos', 'post type general name'),
+			'singular_name' => _x('Foto', 'post type singular name'),
+			'add_new' => _x('Adicionar', 'Novo'),
+			'add_new_item' => __('Novo'),
+			'edit_item' => __('Editar'),
+			'new_item' => __('Novo'),
+			'view_item' => __('Ver'),
+			'search_items' => __('Procurar'),
+			'not_found' =>  __('Nenhum registro encontrado'),
+			'not_found_in_trash' => __('Nenhum registro encontrado na lixeira'),
+			'parent_item_colon' => '',
+			'menu_name' => 'Fotos',
+		); 
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'public_queryable' => true,
+			'show_ui' => true,			
+			'query_var' => true,
+			'rewrite' => true,
+			'capability_type' => 'post',
+			'has_archive' => true,
+			'hierarchical' => false,
+			'menu_position' => null,
+			'menu_icon' => 'dashicons-format-aside',		
+			'supports' => array('title','editor','thumbnail','comments', 'excerpt', 'custom-fields', 'revisions', 'trackbacks')
+        ); 
+            register_post_type( 'foto' , $args );
+            flush_rewrite_rules();
+}
     /* Creates PodCast */
 	add_action('init', 'type_post_podcasts'); 
 	function type_post_podcasts() { 
@@ -322,6 +356,7 @@
                         "postagem",
 						"filme",
 						"video",
+						"foto",
 						"podcast",
 						"livros",
 						"artigo",

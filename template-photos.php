@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Vídeos
+Template Name: Fotos
 */
 ?>
 <?php get_header(); ?>
@@ -30,13 +30,19 @@ Template Name: Vídeos
 		</div>
 	</nav>
 	<!--Posts-->
-	<section id="videos">
+	<section id="posts">
 		<div class="container">
-			<div class="offset-md-2 col-md-8">
-				<?php echo do_shortcode('[facetwp facet="search"]'); ?>
+			<div class="row">				
+				<div class="offset-md-2 col-md-8">
+					<?php echo do_shortcode('[facetwp facet="search"]'); ?>
+				</div>
+				<div class="col-md-12">
+					<?php the_field('description'); ?>
+				</div>
+				<div class="col-md-12">
+					<?php echo do_shortcode('[facetwp template="fotos"]'); ?>
+				</div>
 			</div>
-			<?php the_field('description'); ?>
-			<?php echo do_shortcode('[facetwp template="videos"]'); ?>
 		</div>
 	</section>
 	<!--/Posts-->

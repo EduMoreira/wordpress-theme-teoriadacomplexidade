@@ -11,9 +11,9 @@
     input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"], textarea {
         background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
         border: 1px solid #d1d1d1;
-        border-radius: 2px;
+        border-radius: 3px;
         color: #686868;
-        padding: 0.625em 0.4375em;
+        padding: 5px 15px;
         width: 100%;
     }
     .comment-form-comment{
@@ -26,7 +26,7 @@
         border-radius: 5px;
     }
     input[type="submit"]{
-        border-radius: 50px;
+        border-radius: 5px;
         padding: 10px 15px;
         display: inline-block;
         text-align: center;
@@ -38,12 +38,12 @@
         transform: scale(1) rotate(0deg);
         transition: all .2s ease-in-out;
         color: white;
-        background-color: @green;
+        background-color: @blue-700;
         border-width: 0;
         width: 100%;
     }
     input[type="submit"]:hover{
-        background-color: @green-light;
+        background-color: @blue-500;
     }
     img{
         border-radius: 50%;
@@ -52,12 +52,12 @@
         li{
             list-style-type: none;
             background-color: white;
-            border-radius: 5px;
+            border-radius: 3px;
             padding: 10px;
             margin-bottom: 20px;
         }
         li:hover{
-            background-color: @green-light;
+            background-color: @blue-500;
             color:white;
         }
     }

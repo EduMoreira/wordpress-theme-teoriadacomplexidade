@@ -102,7 +102,7 @@
 		?>
 		<a href="<?php echo home_url(); ?>" class="logo">
 			<img src="<?php bloginfo('template_url'); ?>/img/logo-white.svg" class="white" alt="Teoria da Complexidade"/>
-			<img src="<?php bloginfo('template_url'); ?>/img/logo-black.svg" class="black" alt="Teoria da Complexidade"/>
+			<img src="<?php bloginfo('template_url'); ?>/img/logo-white.svg" class="black" alt="Teoria da Complexidade"/>
 		</a>		
 		<button id="menu-button">
 			<span class="lines-container">

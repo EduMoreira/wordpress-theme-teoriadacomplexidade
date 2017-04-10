@@ -1,18 +1,22 @@
 section#blog{
     padding-bottom: 50px;
-    .col-md-6{
-        margin-bottom: 50px;
-    }
+    min-height: 70vh;
     .background {
-        height: 120px;
-    } 
+        height: 200px;
+    }
     .post{
-        h1{
+        padding-bottom: 50px;
+        h4{
+            font-size: 22px;
             min-height: 32px;
-            margin: 0;
+            margin-top: 0;
         }
-        .description{
-            min-height: 100px;
+        .col-md-7{
+            border-bottom: 1px solid @bluegrey-500;
+            padding-bottom: 15px;
+            .description{
+                min-height: 100px;
+            }
         }
     }    
 }
@@ -20,7 +24,7 @@ section#blog{
 @media (max-width: @screen-sm-max) {
     section#blog{
         .post{
-            h1{
+            h4{
                 margin-top: 15px;
             }
             .description{

@@ -16,6 +16,7 @@ Template Name: Artigos
 		</div>
     </section>
 	<!--/Banner-->
+	<!-- Scroll Menu-->
 	<nav>
 		<div class="scroll-menu">
 			<a href="/index.php/blog">Blog</a>
@@ -29,19 +30,16 @@ Template Name: Artigos
 			<a href="/index.php/blog/links-recomendados">Links</a>
 		</div>
 	</nav>
+	<!--/Scroll Menu-->
 	<!--Posts-->
 	<section id="posts">
 		<div class="container">
+			<div class="offset-md-2 col-md-8">
+				<?php echo do_shortcode('[facetwp facet="search"]'); ?>
+			</div>
+			<?php the_field('description'); ?>
 			<div class="row">
-				<div class="col-md-12">
-					<div class="col-md-offset-2 col-md-8">
-						<?php echo do_shortcode('[facetwp facet="search"]'); ?>
-					</div>
-					<div class="col-md-12">
-						<?php the_field('description'); ?>
-					</div>
-					<?php echo do_shortcode('[facetwp template="artigos"]'); ?>
-				</div>
+				<?php echo do_shortcode('[facetwp template="artigos"]'); ?>
 			</div>
 		</div>
 	</section>

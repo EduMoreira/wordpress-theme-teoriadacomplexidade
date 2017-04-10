@@ -19,27 +19,22 @@ Template Name: Mais Áreas de Interesse
 	<!--Categories-->
 	<section id="more-interest">
 		<div class="container">
+			<?php the_field('description'); ?>
 			<div class="row">
-				<div class="col-md-12">
-					<?php the_field('description'); ?>
-				</div>
-				<div>
-					<?php if( have_rows('more-interest') ): ?>                        
-						<?php while( have_rows('more-interest') ): the_row(); ?>
-							<div class="col-md-4">
-								<div class="card">
-									<a href="<?php the_sub_field('link'); ?>">
-										<h1 class="uppercase"><?php the_sub_field('title'); ?></h1>
-										<div class="background" style="background-image:url(<?php the_sub_field('cover'); ?>);">
-										</div>
-									</a>
-									<p class="description hidden-xs"><?php the_sub_field('description'); ?></p>
-									<!--<a class="btn" href="<?php the_sub_field('link'); ?>">Mais</a>-->
-								</div>
+				<?php if( have_rows('more-interest') ): ?>                        
+					<?php while( have_rows('more-interest') ): the_row(); ?>
+						<div class="col-md-4">
+							<div class="card">
+								<a href="<?php the_sub_field('link'); ?>">
+									<h1 class="uppercase"><?php the_sub_field('title'); ?></h1>
+									<div class="background" style="background-image:url(<?php the_sub_field('cover'); ?>);"></div>
+								</a>
+								<p class="description"><?php the_sub_field('description'); ?></p>
+								<!--<a class="btn" href="<?php the_sub_field('link'); ?>">Mais</a>-->
 							</div>
-						<?php endwhile; ?>                        
-					<?php endif; ?>
-				</div>
+						</div>
+					<?php endwhile; ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</section>

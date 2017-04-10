@@ -1,11 +1,11 @@
 .serif(){
-    font-family: "adobe-text-pro", serif;
+    font-family: "museo-slab", serif;
 }
 .heading-font(){
     font-family: "myriad-pro", sans-serif;
 }
 *, body{
-    font-size: 16px;
+    font-size: 20px;
     .heading-font();
     .screen-sm({
         font-size: 18px;
@@ -14,7 +14,6 @@
 p {
     .serif();
     margin: 0 0 30px;
-    line-height: 30px;
     > a,b,em,u,strong,i{
         .serif();
     }
@@ -51,4 +50,25 @@ h5{
 }
 h6{
     font-size: 10px;
+}
+img.alignright {
+    float:right; margin:0 0 1em 1em;
+}
+img.alignleft {
+    float:left; margin:0 1em 1em 0;
+}
+img.aligncenter {
+    display: block; margin-left: auto; margin-right: auto;
+}
+a img.alignright {
+    float:right; margin:0 0 1em 1em;
+}
+a img.alignleft {
+    float:left; margin:0 1em 1em 0;
+}
+a img.aligncenter {
+    display: block; margin-left: auto; margin-right: auto;
+}
+.entry-date{
+    float:left;
 }

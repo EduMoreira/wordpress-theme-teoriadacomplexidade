@@ -10,9 +10,6 @@
                 <div class="content">
                     <h1 class="uppercase"><?php the_title(); ?></h1>
                     <h2><?php the_field('subtitle'); ?></h2>
-                    <!--Data post-->
-                    <!--<div class="entry-date"><?php echo get_the_date(); ?></div>-->
-                    <!--/Data post-->
                 </div>
             </div>
         </div>
@@ -25,7 +22,7 @@
                 <div class="col-md-6 paper">
                     <div>
                         <h3><?php the_field('descript'); ?></h3>
-                         <div class="<?php echo get_field('pdf_file')?'download':'hidden'; ?>">
+                        <div class="<?php echo get_field('pdf_file')?'download':'hidden'; ?>">
                             <a target="_blank" href="<?php the_field('pdf_file'); ?>"><img src="<?php bloginfo('template_url'); ?>/img/icons/pdf.svg"><h1>Download</h1></a>
                         </div>
                         <p><?php the_field('video'); ?></p>
@@ -40,9 +37,6 @@
                             <?php endif; ?>
                         </div>
                         <p><?php the_field('content'); ?></p>
-                        <div class="col-md-12">
-                            <p></p>
-                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 comments">

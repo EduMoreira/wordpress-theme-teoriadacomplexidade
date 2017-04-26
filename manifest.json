@@ -1,5 +1,5 @@
 {
-	"name": "iGet",
+	"name": "Blog da Teoria da Complexidade",
 	"icons": [
 		{
 			"src": "\/android-chrome-36x36.png",
@@ -38,6 +38,6 @@
 			"density": 4
 		}
 	],
-	"start_url": "http:\/\/www.iget.com.br",
+	"start_url": "https:\/\/www.teoriadacomplexidade.com.br",
 	"display": "standalone"
 }

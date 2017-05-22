@@ -37,9 +37,11 @@ Template Name: Postagens
 			<div class="offset-md-2 col-md-8">
 				<?php echo do_shortcode('[facetwp facet="search"]'); ?>
 			</div>
-			<?php the_field('description'); ?>
-			<div class="row">
-				<?php echo do_shortcode('[facetwp template="teoria_da_complexidade"]'); ?>
+			<div class="col-md-12">
+				<div class="row">
+					<?php the_field('description'); ?>
+					<?php echo do_shortcode('[facetwp template="teoria_da_complexidade"]'); ?>
+				</div>
 			</div>
 		</div>
 	</section>

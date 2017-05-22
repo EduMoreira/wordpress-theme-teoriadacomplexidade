@@ -60,7 +60,7 @@ Template Name: Filmes
 									<div class="content center"></div>
 								</div>
 							</div>
-							<?php the_title( '<h1 class="uppercase">', '</h1>' ); ?>
+							<?php the_title( '<h3 class="uppercase">', '</h3>' ); ?>
 						</a>
 					</div>
 				<?php endwhile; ?>

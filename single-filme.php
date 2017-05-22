@@ -9,7 +9,7 @@
             <div class="content--wrapper">
                 <div class="content">
                     <h1 class="uppercase"><?php the_title(); ?></h1>
-                    <h2><?php the_field('subtitle'); ?></h2>
+                    <h2 class="uppercase"><?php the_field('subtitle'); ?></h2>
                 </div>
             </div>
         </div>
@@ -20,13 +20,17 @@
         <div class="container">
             <div class="row">
                 <div class="offset-md-2 col-md-8 paper">
-                    <img class="img-responsive" src="<?php the_field('cover'); ?>" alt="<?php the_title(); ?>">
+                    <div class="download">
+                        <a target="_blank" href="<?php the_field('link'); ?>">
+                            <img class="file-type img-responsive" src="<?php the_field('cover'); ?>">
+                            <spam class="btn btn-green">Assistir</spam>
+                        </a>
+                    </div>
                     <div class="share">
                         <a href="http://twitter.com/home?status=<?php the_title(); ?> <?php bloginfo('url')?>?p=<?php the_ID(); ?> via @tcomplexidade" title="Postar no Twitter!" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-network/twitter.svg" height="32px"></a>
                         <a href="http://www.facebook.com/sharer.php?u=<?php bloginfo('url')?>?p=<?php the_ID(); ?><?php the_title(); ?>" title="Postar no Facebook" target="blank"><img src="<?php bloginfo('template_url'); ?>/img/social-network/facebook.svg" height="32px"></a>
                     </div>
-                    <p><?php the_field('content'); ?></p>
-                    <a class="btn btn-blue" href="<?php the_field('link'); ?>" target="_blank">Assistir</a>
+                    <?php the_field('content'); ?>
                 </div>
                 <div class="offset-md-2 col-md-8 comments">
                     <?php comments_template( '', true ); ?>

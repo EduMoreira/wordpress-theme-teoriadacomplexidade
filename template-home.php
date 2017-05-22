@@ -14,21 +14,14 @@ Template Name: Início
 							<div class="content--wrapper background" style="background-image:url(<?php the_sub_field('carousel_image_desktop'); ?>);">
 								<div class="content center <?php echo get_sub_field('carousel_image_desktop')?'emphasize':''; ?>">
 									<div class="container">
-										<div class="row">
+										<div class="offset-md-2 col-md-8">
 											<div class="col-md-12">
 												<img class="<?php echo get_sub_field('banner_primary_image')?'offset-md-2 highlight-img':'hidden-md-up'; ?>" src="<?php the_sub_field('banner_primary_image'); ?>">
 											</div>
-										</div>
-										<div class="row">
-											<div class="hero-text <?php echo get_sub_field('banner_secondary_image')?'col-md-6':'offset-md-2 col-md-8'; ?>">
+											<div class="col-md-12">
 												<h1 class="<?php the_sub_field('background_pattern'); ?> uppercase"><?php the_sub_field('carousel_title'); ?></h1>
-												<h2 class="<?php the_sub_field('background_pattern'); ?>"><?php the_sub_field('carousel_subtitle'); ?></h2>
+												<h2 class="<?php the_sub_field('background_pattern'); ?> uppercase"><?php the_sub_field('carousel_subtitle'); ?></h2>
 												<a class="btn btn-<?php the_sub_field('background_pattern'); ?> <?php echo get_sub_field('carousel_link')?'':'hidden-up'; ?>" value="Contato" href="<?php the_sub_field('carousel_link'); ?>">Saiba Mais</a>
-											</div>
-											<div class="col-md-offset-3 col-md-3 hidden-md-up">
-												<a href="<?php the_sub_field('carousel_link'); ?>">
-													<img class="<?php echo get_sub_field('banner_secondary_image')?'secondary-img':'hidden'; ?>" src="<?php the_sub_field('banner_secondary_image'); ?>">
-												</a>
 											</div>
 										</div>
 									</div>
@@ -60,14 +53,14 @@ Template Name: Início
 	<!--Categories-->
 	<section id="categories">
 		<div class="container">
-			<h3 class="uppercase">Escolha a Área do seu interesse</h3>
+			<!--<h1 class="uppercase">Escolha a Área do seu interesse</h1>-->
 			<div class="row">
 				<?php if( have_rows('areas') ): ?>                        
 					<?php while( have_rows('areas') ): the_row(); ?>						
-						<div class="col-6 col-md-2">
+						<div class="col-6 col-md-4 col-lg-2">
 							<a href="<?php the_sub_field('link'); ?>">
 								<div class="background" style="background-image:url(<?php the_sub_field('imagem'); ?>);"></div>
-								<h4 class="uppercase"><?php the_sub_field('title'); ?></h4>
+								<h3 class="uppercase"><?php the_sub_field('title'); ?></h3>
 							</a>
 						</div>
 					<?php endwhile; ?>                        
@@ -79,9 +72,13 @@ Template Name: Início
 	<!--Feed-->
 	<section id="feed">
 		<div class="container">
-			<h3 class="uppercase">Os Posts mais recentes</h3>
-			<div class="col-md-9">
-				<?php echo do_shortcode('[facetwp template="posts"]'); ?>
+			<div class="row">
+				<!--<div class="col-md-12">
+					<h1 class="uppercase">Os Posts mais recentes</h1>
+				</div>-->
+				<div class="col-md-9">
+					<?php echo do_shortcode('[facetwp template="posts"]'); ?>
+				</div>
 			</div>
 		</div>
 	</section>

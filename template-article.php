@@ -23,9 +23,9 @@ Template Name: Artigos
 			<a href="/index.php/blog/artigos">Artigos</a>
 			<a href="/index.php/blog/textos">Textos</a>
 			<a href="/index.php/blog/fotos/?fwp_categories=fotos">Fotos</a>
-			<a href="/index.php/blogfilmes">Filmes</a>
+			<a href="/index.php/blog/filmes">Filmes</a>
 			<a href="/index.php/blog/postagens/videos/?fwp_categories=video">Vídeos</a>
-			<a href="/index.php/blogpodcasts">Podcasts</a>
+			<a href="/index.php/blog/podcasts">Podcasts</a>
 			<a href="/index.php/blog/livros">Livros</a>
 			<a href="/index.php/blog/links-recomendados">Links</a>
 		</div>
@@ -37,9 +37,11 @@ Template Name: Artigos
 			<div class="offset-md-2 col-md-8">
 				<?php echo do_shortcode('[facetwp facet="search"]'); ?>
 			</div>
-			<?php the_field('description'); ?>
-			<div class="row">
-				<?php echo do_shortcode('[facetwp template="artigos"]'); ?>
+			<div class="col-md-12">
+				<div class="row">
+					<?php the_field('description'); ?>
+					<?php echo do_shortcode('[facetwp template="artigos"]'); ?>
+				</div>
 			</div>
 		</div>
 	</section>

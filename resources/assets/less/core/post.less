@@ -1,0 +1,30 @@
+.post{
+    margin-bottom: 50px;
+    .description{
+        text-align: justify;
+    }
+    .btn{
+        float: right;
+    }
+    h3{
+        font-size: 1.3rem;
+        margin-top: 0;
+    }
+}
+@media (max-width: @screen-sm-max) {
+    .post{
+        h3{
+            text-align: center;
+            margin-top: 15px;
+        }
+        .btn{
+            float: none;
+        }
+        .description{
+            min-height: 0;
+            p{
+                margin: 0;
+            }
+        }
+    }
+}

@@ -47,7 +47,7 @@
 <script>
 	$("#image-gallery").justifiedGallery({
         rowHeight : 300,
-        lastRow : 'justify',
+        lastRow : 'nojustify',
         margins : 5,
         randomize : false,
     });

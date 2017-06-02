@@ -13,7 +13,7 @@ section#banner.carousel{
             }
         }
         h1{
-            font-size: 32px;
+            font-size: 2rem;
         }
     }
     .content--wrapper{
@@ -34,10 +34,7 @@ section#banner.carousel{
     }
     .highlight-img{
         max-height: 20vh;
-        margin: 0 auto;
-    }
-    .secondary-img{
-        max-height: 20vh;
+        max-width: 100%;
         margin: 0 auto;
     }
 }
@@ -47,32 +44,16 @@ section#categories{
         margin-bottom: 15px;
     }
     h3{
-        font-size: 14px;
         text-align: center;
-        height: 36px;
-        padding-top: 10px;
+        padding-top: 15px;
     }
     .background{
-         height: 150px;
-     }
+         height: 9.2rem;
+    }
 }
 section#feed{
     padding-top: 100px;
     padding-bottom: 50px;
-    .background {
-        height: 200px;
-    }
-    h3{
-        font-size: 22px;
-        min-height: 32px;
-        margin-top: 0;
-    }
-    .description{
-        min-height: 100px;
-    }
-    .post{
-        padding-bottom: 50px;
-    }
 }
 // Small and extra-small devices specific rules
 @media (max-width: @screen-sm-max) {
@@ -88,41 +69,5 @@ section#feed{
                 float: none;
             }
         }
-    }
-    section#categories{
-        .area{
-            h1,h2{
-                padding: 0;
-                text-align: center;
-                color: white;
-            }
-            h1{
-                font-size: 22px;
-            }
-            h2{
-                font-size: 16px;
-                font-weight: 300;
-                line-height: 21px;
-            }
-        }
-        .col-md-3{
-            .background{
-                height: 33vh;
-            }
-        }
-    }
-    section#feed{
-        .post{
-            h3{
-                margin-top: 15px;
-                text-align: center;
-            }
-            .description{
-                min-height: 0;
-                p{
-                    margin: 0;
-                }
-            }
-        }  
     }
 }

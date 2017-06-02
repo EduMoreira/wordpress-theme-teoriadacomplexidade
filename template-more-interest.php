@@ -26,7 +26,7 @@ Template Name: Mais Áreas de Interesse
 						<div class="col-md-4">
 							<div class="card">
 								<a href="<?php the_sub_field('link'); ?>">
-									<h1 class="uppercase"><?php the_sub_field('title'); ?></h1>
+									<h3 class="uppercase"><?php the_sub_field('title'); ?></h3>
 									<div class="background" style="background-image:url(<?php the_sub_field('cover'); ?>);"></div>
 								</a>
 								<p class="description"><?php the_sub_field('description'); ?></p>

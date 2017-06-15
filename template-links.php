@@ -16,12 +16,13 @@ Template Name: Links Recomendados
 		</div>
     </section>
 	<!--/Banner-->
+	<!-- Scroll Menu-->
 	<nav>
 		<div class="scroll-menu">
 			<a href="/index.php/blog">Blog</a>
 			<a href="/index.php/blog/artigos">Artigos</a>
 			<a href="/index.php/blog/textos">Textos</a>
-			<a href="/index.php/blog/fotos">Fotos</a>
+			<a href="/index.php/blog/fotos/?fwp_categories=fotos">Fotos</a>
 			<a href="/index.php/blog/filmes">Filmes</a>
 			<a href="/index.php/blog/postagens/videos/?fwp_categories=video">Vídeos</a>
 			<a href="/index.php/blog/podcasts">Podcasts</a>
@@ -29,7 +30,9 @@ Template Name: Links Recomendados
 			<a href="/index.php/blog/links-recomendados">Links</a>
 		</div>
 	</nav>
-		<section id="more-interest">
+	<!--/Scroll Menu-->
+	<!--Links Recomendados-->
+	<section id="more-interest">
 		<div class="container">
 			<?php the_field('description'); ?>
 			<div class="row">
@@ -53,9 +56,7 @@ Template Name: Links Recomendados
 				<div class="col-md-4">
 					<div class="card">
 						<a href="<?php the_field('link'); ?>" target="_blank">
-							<h1>
-								<?php the_title(); ?>
-							</h1>
+							<h3 class="uppercase"><?php the_title(); ?></h3>
 							<div class="background" style="background-image:url(<?php the_field('cover'); ?>);">
 							</div>
 						</a>
@@ -73,5 +74,6 @@ Template Name: Links Recomendados
 			</div>
 		</div>
 	</section>
+	<!--/Links Recomendados-->
 </main>
 <?php get_footer();	?>

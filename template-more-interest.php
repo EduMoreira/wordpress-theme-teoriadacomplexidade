@@ -30,7 +30,6 @@ Template Name: Mais Áreas de Interesse
 									<div class="background" style="background-image:url(<?php the_sub_field('cover'); ?>);"></div>
 								</a>
 								<p class="description"><?php the_sub_field('description'); ?></p>
-								<!--<a class="btn" href="<?php the_sub_field('link'); ?>">Mais</a>-->
 							</div>
 						</div>
 					<?php endwhile; ?>

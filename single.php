@@ -24,10 +24,6 @@
                             <spam class="btn btn-green">Download</spam>
                         </a>
                     </div>
-                    <div class="share">
-                        <a href="http://twitter.com/home?status=<?php the_title(); ?> <?php bloginfo('url')?>?p=<?php the_ID(); ?> via @tcomplexidade" title="Postar no Twitter!" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-network/twitter.svg" height="32px"></a>
-                        <a href="http://www.facebook.com/sharer.php?u=<?php bloginfo('url')?>?p=<?php the_ID(); ?><?php the_title(); ?>" title="Postar no Facebook" target="blank"><img src="<?php bloginfo('template_url'); ?>/img/social-network/facebook.svg" height="32px"></a>
-                    </div>
                     <?php the_field('video'); ?>
                     <?php the_field('content'); ?>
                 </div>

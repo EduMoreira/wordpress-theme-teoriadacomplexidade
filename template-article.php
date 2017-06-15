@@ -31,12 +31,16 @@ Template Name: Artigos
 		</div>
 	</nav>
 	<!--/Scroll Menu-->
+	<!--Search-->
+	<section id="search">
+		<div class="offset-md-2 col-md-8">
+			<?php echo do_shortcode('[facetwp facet="search"]'); ?>
+		</div>
+	</section>
+	<!--/Search-->
 	<!--Posts-->
 	<section id="posts">
 		<div class="container">
-			<div class="offset-md-2 col-md-8">
-				<?php echo do_shortcode('[facetwp facet="search"]'); ?>
-			</div>
 			<div class="col-md-12">
 				<div class="row">
 					<?php the_field('description'); ?>

@@ -71,7 +71,8 @@
         'not_found_in_trash' => __('Nenhum registro encontrado na lixeira'),
         'parent_item_colon' => '',
         'menu_name' => 'Postagens',
-    ); 
+    );
+
     $args = array(
         'labels' => $labels,
         'public' => true,
@@ -85,7 +86,8 @@
         'menu_position' => null,
         'menu_icon' => 'dashicons-welcome-widgets-menus',	
         'supports' => array('title','editor','thumbnail','comments', 'excerpt', 'custom-fields', 'revisions', 'trackbacks')
-    ); 
+    );
+
     register_post_type( 'postagem' , $args );
     flush_rewrite_rules();
     }
@@ -388,9 +390,10 @@
     function changeLoginLogoUrl() {
         return home_url();
     }
+    
     /* Change login page logo title text */
     function changeLoginLogoUrlTitle() {
-        return 'Clara Motos. Compra. Troca. Financiamento.';
+        return 'O Blog da Teoria da Complexidade';
     }
 
     /* Customize admin menu */

@@ -31,8 +31,10 @@ Template Name: Blog
 	<!--/Scroll Menu-->
 	<!--Search-->
 	<section id="search">
-		<div class="offset-md-2 col-md-8">
-			<?php echo do_shortcode('[facetwp facet="search"]'); ?>
+		<div class="container">
+			<div class="offset-md-2 col-md-8">
+				<?php echo do_shortcode('[facetwp facet="search"]'); ?>
+			</div>
 		</div>
 	</section>
 	<!--/Search-->
